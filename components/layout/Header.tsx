@@ -1,19 +1,21 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // 1. Import hook lấy URL hiện tại
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Đang Hoạt Động", href: "#portfolio" },
-  { label: "Sắp Ra Mắt", href: "#products" },
-  { label: "Về Hệ Thống", href: "#journey" },
-  { label: "Tư Vấn", href: "#contact" },
-  { label: "Tin Tức", href: "#news" },
+  { label: "Đang Hoạt Động", href: "/dang-hoat-dong" },
+  { label: "Sắp Ra Mắt", href: "/sap-ra-mat" },
+  { label: "Về Hệ Thống", href: "/ve-he-thong" },
+  { label: "Tư Vấn", href: "/tu-van" },
+  { label: "Tin Tức", href: "/tin-tuc" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname(); // 2. Khởi tạo biến lấy đường dẫn
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#0F1A41]/90 text-white backdrop-blur-md font-['Inter',_sans-serif]">
@@ -27,16 +29,27 @@ export default function Header() {
           </div>
         </Link>
 
+        {/* --- DESKTOP NAVIGATION --- */}
         <nav className="hidden items-center gap-8 text-[12px] font-medium uppercase tracking-[0.15em] lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="relative text-white/70 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            // Logic Active: Nếu URL hiện tại bắt đầu bằng href của menu thì cho sáng lên
+            // (Chỉ áp dụng với các link có dấu / ở đầu, bỏ qua các link dạng #)
+            const isActive = item.href.startsWith("/") && pathname.startsWith(item.href);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:bg-amber-400 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-amber-400 after:w-full" // Đang Active: Chữ vàng, gạch chân full
+                    : "text-white/70 hover:text-white after:w-0 hover:after:w-full" // Bình thường: Chữ xám, trỏ chuột mới gạch chân
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
@@ -62,32 +75,41 @@ export default function Header() {
         </button>
       </div>
 
+      {/* --- MOBILE NAVIGATION --- */}
       {open && (
-        <div className="border-t border-white/10 bg-[#0F1A41] px-6 py-6 lg:hidden">
+        <div className="border-t border-white/10 bg-[#0F1A41] px-6 py-6 lg:hidden shadow-xl">
           <div className="flex flex-col gap-4 text-xs font-bold uppercase tracking-widest">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="py-2 text-white/80 border-b border-white/5 hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = item.href.startsWith("/") && pathname.startsWith(item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`py-2 border-b border-white/5 transition-colors ${
+                    isActive 
+                      ? "text-amber-400" // Active trên mobile
+                      : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
 
             <div className="flex items-center border border-white/10 w-fit mt-2">
               <button className="px-4 py-2 bg-white text-[#0F1A41] font-bold text-[11px]">VI</button>
               <button className="px-4 py-2 text-white/60 font-bold text-[11px]">EN</button>
             </div>
 
-            <a
+            <Link
               href="#contact"
               onClick={() => setOpen(false)}
               className="mt-4 bg-white text-[#0F1A41] py-3.5 text-center text-xs font-bold uppercase tracking-widest hover:bg-amber-400 transition-colors duration-300 rounded-none"
             >
               Liên hệ ngay
-            </a>
+            </Link>
           </div>
         </div>
       )}

@@ -47,28 +47,28 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-[#0F1A41] py-24 md:py-32 text-white font-['Inter',_sans-serif]"
+      className="relative w-full overflow-hidden bg-[#F4F5F7] py-24 md:py-32 text-[#0F1A41] font-['Inter',_sans-serif] border-t border-[#0F1A41]/10"
     >
-      {/* Hệ lưới kiến trúc chìm mảnh dưới nền */}
+      {/* Hệ lưới kiến trúc chìm mảnh dưới nền - Đổi sang màu tối mờ */}
       <div className="absolute inset-0 z-0">
-        <div className="grid h-full w-full grid-cols-4 border-l border-white/[0.02] md:grid-cols-12">
+        <div className="grid h-full w-full grid-cols-4 border-l border-[#0F1A41]/[0.02] md:grid-cols-12">
           {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className="h-full w-full border-r border-white/[0.02]"
+              className="h-full w-full border-r border-[#0F1A41]/[0.03]"
             />
           ))}
         </div>
       </div>
 
-      <div className="absolute left-0 top-0 h-[350px] w-[350px] bg-amber-400/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 h-[300px] w-[300px] bg-amber-400/5 blur-[120px] pointer-events-none" />
+      {/* Đèn Blur chuyển sang tông hổ phách dịu để tiệp với nền sáng */}
+      <div className="absolute left-0 top-0 h-[350px] w-[350px] bg-amber-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[300px] w-[300px] bg-amber-500/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-[1280px] mx-auto px-6 relative z-10">
-        {/* Thay đổi từ grid-cols-12 với tỉ lệ 5/7 sang tỉ lệ 7/5 để cột trái rộng hẳn ra */}
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-8">
           
-          {/* KHỐI THÔNG TIN BÊN TRÁI: Tăng từ col-span-5 lên col-span-7 để kéo dài diện tích chữ */}
+          {/* KHỐI THÔNG TIN BÊN TRÁI */}
           <div className="space-y-10 lg:col-span-7 pt-4 w-full">
             <motion.div
               initial={{ opacity: 0, x: -15 }}
@@ -76,53 +76,53 @@ export default function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.4em] text-amber-400">
-                Connect With Us
+              <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.4em] text-amber-600">
+                Tham Gia Hệ Thống
               </span>
 
-              {/* Tiêu đề chính: Dùng ngắt dòng chủ động tinh tế, kết hợp whitespace-nowrap ngăn vỡ chữ */}
-              <h2 className="mb-6 text-4xl font-bold uppercase leading-[1.2] tracking-tight md:text-5xl lg:text-[54px] text-white max-w-full">
+              <h2 className="mb-6 text-4xl font-bold uppercase leading-[1.2] tracking-tight md:text-5xl lg:text-[54px] text-[#0F1A41] max-w-full">
                 Khởi Đầu Hành Trình <br />
-                <span className="text-amber-100/90 whitespace-nowrap">Quản Lý Gia Sản</span> <br />
-                <span className="text-amber-100/90 whitespace-nowrap">Vững Bền Gia Tộc</span>
+                <span className="text-[#0F1A41]/70 whitespace-nowrap">Quản Lý Gia Sản</span> <br />
+                <span className="text-[#0F1A41]/70 whitespace-nowrap">Vững Bền Gia Tộc</span>
               </h2>
 
-              <p className="max-w-xl text-xs leading-relaxed text-slate-400 font-light tracking-wide">
+              <p className="max-w-xl text-xs leading-relaxed text-slate-600 font-light tracking-wide">
                 Tại CityHouse, sự minh bạch không chỉ là cam kết, mà là hệ thống vận hành thực tế giúp Chủ đầu tư hoàn toàn an tâm về tài sản của mình.
               </p>
             </motion.div>
 
             {/* Thông tin liên hệ phụ dưới vách ngăn mảnh */}
-            <div className="grid grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-2 max-w-xl">
+            <div className="grid grid-cols-1 gap-6 border-t border-[#0F1A41]/10 pt-8 sm:grid-cols-2 max-w-xl">
               <div>
-                <p className="mb-2 text-[9px] font-bold uppercase tracking-widest text-white/30">
+                <p className="mb-2 text-[9px] font-bold uppercase tracking-widest text-[#0F1A41]/40">
                   Văn phòng chiến lược
                 </p>
-                <p className="text-xs font-light leading-relaxed text-slate-300">
+                <p className="text-xs font-semibold leading-relaxed text-[#0F1A41]/80">
                   485B Nguyễn Đình Chiểu, phường Bàn Cờ, TP.HCM
                 </p>
               </div>
 
               <div>
-                <p className="mb-2 text-[9px] font-bold uppercase tracking-widest text-white/30">
-                  Thời gian làm việc
+                <p className="mb-2 text-[9px] font-bold uppercase tracking-widest text-[#0F1A41]/40">
+                  Hotline
                 </p>
-                <p className="text-xs font-light leading-relaxed text-slate-300">
-                  Thứ 2 - Thứ 7 <span className="text-white/20 mx-1">|</span> 08:00 - 18:00
+                <p className="text-xs font-semibold leading-relaxed text-[#0F1A41]/80">
+                  0878 25 35 45
                 </p>
               </div>
             </div>
           </div>
 
-          {/* KHỐI FORM ĐĂNG KÝ BÊN PHẢI: Hạ từ col-span-7 xuống col-span-5 để nhường không gian */}
+          {/* KHỐI FORM ĐĂNG KÝ BÊN PHẢI */}
           <div className="flex justify-center lg:col-span-5 lg:justify-end w-full">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-full max-w-md border border-white/10 bg-white/[0.02] p-6 md:p-8 backdrop-blur-md rounded-none shadow-2xl relative"
+              className="w-full max-w-md border border-[#0F1A41]/10 bg-[#0F1A41] p-6 md:p-8 rounded-none shadow-2xl relative text-white"
             >
+              {/* Form giữ khối màu Navy đậm để tạo điểm nhấn tương phản cực mạnh (Pop-up effect) */}
               <div className="absolute right-0 top-0 h-12 w-12 border-r border-t border-amber-400/20" />
 
               <h3 className="mb-8 text-xl font-bold uppercase tracking-wide text-white">
