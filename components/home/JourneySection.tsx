@@ -91,7 +91,7 @@ export default function CityHouseTimelineSection() {
 
                     {/* Hộp Thẻ Nội Dung bên dưới */}
                     <div
-                      className={`relative min-h-[245px] overflow-hidden rounded-[24px] border px-6 pb-8 pt-[88px] transition-all duration-500 ${
+                      className={`relative min-h-[245px] overflow-hidden  border px-6 pb-8 pt-[88px] transition-all duration-500 ${
                         isActive
                           ? "border-white/30 bg-[#0F1A41] text-white shadow-[0_30px_60px_rgba(15,26,65,0.7)]"
                           : "border-white/10 bg-[#0F1A41]/50 text-white backdrop-blur-md hover:-translate-y-3 hover:scale-[1.02] hover:border-white/30 hover:bg-[#0F1A41] hover:shadow-[0_30px_60px_rgba(15,26,65,0.6)]"
