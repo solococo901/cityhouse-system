@@ -80,7 +80,7 @@ export default function HeroSection() {
         </div>
 
         {/* Hệ thống Thống kê dưới chân trang (Độ mờ background tăng nhẹ lên bg-[#0F1A41]/90 để làm bệ đỡ vững chãi cho data) */}
-        <div className="w-full border-t border-white/10 bg-[#0F1A41]/90 backdrop-blur-md">
+        <div className="w-full border-t mt-2 border-white/10 bg-[#0F1A41]/90 backdrop-blur-md">
           <div className="mx-auto max-w-[1280px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {featureItems.map((item) => (
               <div
