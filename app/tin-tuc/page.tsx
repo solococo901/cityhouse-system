@@ -139,7 +139,7 @@ export default function NewsMagazinePage() {
                     {/* --- 3. BÀI VIẾT NỔI BẬT (Chỉ hiện khi ở tab "Tất cả") --- */}
                     {activeCategory === "Tất cả" && featuredArticle && (
                         <Link href={`/tin-tuc/${featuredArticle.id}`} className="group block mb-16">
-                            <div className="flex flex-col lg:flex-row gap-0 lg:gap-0 rounded-2xl overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-shadow duration-500">
+                            <div className="flex flex-col lg:flex-row gap-0 lg:gap-0  overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-shadow duration-500">
                                 {/* Ảnh lớn */}
                                 <div className="w-full lg:w-[60%] relative aspect-video lg:aspect-auto">
                                     <img
@@ -177,14 +177,14 @@ export default function NewsMagazinePage() {
                                 <Link href={`/tin-tuc/${news.id}`} key={news.id} className="group flex flex-col cursor-pointer">
 
                                     {/* Ảnh bài viết */}
-                                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 mb-5">
+                                    <div className="relative aspect-[4/3] w-full overflow-hidden  bg-slate-100 mb-5">
                                         <img
                                             src={news.image}
                                             alt={news.title}
                                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         {/* Badge Category trên ảnh */}
-                                        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#0A1128] rounded-sm">
+                                        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#0A1128] ">
                                             {news.category}
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@ export default function NewsMagazinePage() {
                             ))}
                         </div>
                     ) : (
-                        <div className="w-full py-20 text-center flex flex-col items-center bg-slate-50 rounded-2xl border border-slate-100">
+                        <div className="w-full py-20 text-center flex flex-col items-center bg-slate-50 border border-slate-100">
                             <svg className="w-12 h-12 text-slate-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
                             <h3 className="text-lg font-bold text-slate-700 mb-1">Chưa có bài viết</h3>
                             <p className="text-sm text-slate-500 font-light">Hiện tại chưa có bài viết nào trong chuyên mục này.</p>
