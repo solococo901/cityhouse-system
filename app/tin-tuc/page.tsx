@@ -109,7 +109,7 @@ export default function NewsMagazinePage() {
                 <div className="max-w-[1280px] mx-auto px-4 md:px-6 pt-12 md:pt-16">
 
                     {/* --- 2. HEADER SECTION & FILTER --- */}
-                    <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 border-b border-slate-200 pb-8 mb-10">
+                    <div className="flex flex-col  md:flex-row justify-between md:items-end gap-6 border-b border-slate-200 pb-8 mb-10">
                         <div>
                             <h2 className="text-3xl md:text-[40px] font-bold text-[#1a1a1a] tracking-tight mb-2">
                                 Góc nhìn & Phân tích
@@ -139,7 +139,7 @@ export default function NewsMagazinePage() {
                     {/* --- 3. BÀI VIẾT NỔI BẬT (Chỉ hiện khi ở tab "Tất cả") --- */}
                     {activeCategory === "Tất cả" && featuredArticle && (
                         <Link href={`/tin-tuc/${featuredArticle.id}`} className="group block mb-16">
-                            <div className="flex flex-col lg:flex-row gap-0 lg:gap-0  overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-shadow duration-500">
+                            <div className="flex rounded-xl flex-col lg:flex-row gap-0 lg:gap-0  overflow-hidden border border-slate-200 bg-white hover:shadow-xl transition-shadow duration-500">
                                 {/* Ảnh lớn */}
                                 <div className="w-full lg:w-[60%] relative aspect-video lg:aspect-auto">
                                     <img
@@ -172,12 +172,12 @@ export default function NewsMagazinePage() {
 
                     {/* --- 4. LƯỚI CÁC BÀI VIẾT TIÊU CHUẨN --- */}
                     {filteredArticles.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-8 md:gap-y-12">
+                        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-8 md:gap-y-12">
                             {filteredArticles.map((news) => (
                                 <Link href={`/tin-tuc/${news.id}`} key={news.id} className="group flex flex-col cursor-pointer">
 
                                     {/* Ảnh bài viết */}
-                                    <div className="relative aspect-[4/3] w-full overflow-hidden  bg-slate-100 mb-5">
+                                    <div className="relative  rounded-xl aspect-[4/3] w-full overflow-hidden  bg-slate-100 mb-5">
                                         <img
                                             src={news.image}
                                             alt={news.title}

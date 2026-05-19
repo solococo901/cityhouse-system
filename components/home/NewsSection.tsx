@@ -55,7 +55,7 @@ export default function NewsSection() {
         </div>
 
         {/* CỤM TABS DANH MỤC: Chuyển hoàn toàn sang dạng thẻ hộp vuông tối giản */}
-        <div className="mb-10 flex gap-0 overflow-x-auto border border-slate-200 p-0 rounded-none w-fit [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden bg-white">
+        <div className="mb-10 flex gap-0 overflow-x-auto rounded-xl border border-slate-200 p-0 rounded-none w-fit [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden bg-white">
           {categories.map((item, index) => (
             <button
               key={item}
@@ -71,7 +71,7 @@ export default function NewsSection() {
         </div>
 
         {/* LƯỚI BÀI VIẾT TẠP CHÍ PHẲNG (JOURNAL GRID) */}
-        <div className="grid grid-cols-1 gap-0 border border-slate-200 divide-y md:grid-cols-3 md:divide-y-0 md:divide-x divide-slate-200 bg-white">
+        <div className="grid grid-cols-1 gap-0 border border-slate-200 rounded-xl overflow-hidden divide-y md:grid-cols-3 md:divide-y-0 md:divide-x divide-slate-200 bg-white">
           {posts.map((post) => (
             <article
               key={post.title}

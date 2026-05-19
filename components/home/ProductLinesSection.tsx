@@ -30,7 +30,7 @@ const items = [
 
 export default function ProductLinesSection() {
   return (
-    <section id="products" className="w-full bg-[#FDFDFD] py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
+    <section id="products" className="w-full bg-[#FDFDFD]  py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
       <div className="max-w-[1280px] mx-auto px-6">
         
         {/* TIÊU ĐỀ SECTION - Ép sát khoảng trắng, tracking rộng */}
@@ -43,12 +43,12 @@ export default function ProductLinesSection() {
         </div>
 
         {/* LƯỚI SẢN PHẨM: Vuông góc hoàn toàn, biến đổi thành một khối kiến trúc liền vách */}
-        <div className="grid grid-cols-1 gap-0 border border-slate-200 divide-y sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-5 divide-slate-200 bg-white">
+        <div className="grid grid-cols-1 gap-2 divide-y sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-5 divide-slate-200 bg-white">
           {items.map((item) => (
             <article
               key={item.name}
               className="
-                group relative w-full overflow-hidden rounded-none bg-[#0F1A41]
+                group relative rounded-xl w-full overflow-hidden bg-[#0F1A41]
                 h-[260px] sm:h-[320px] md:h-[380px] lg:h-[440px]
                 transition-all duration-500 cursor-pointer
               "

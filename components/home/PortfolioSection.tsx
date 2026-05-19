@@ -156,7 +156,7 @@ export default function CityHouseEcosystemSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#FDFDFD] py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
+    <section className="relative  overflow-hidden bg-[#FDFDFD] py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
       <div className="max-w-[1280px] mx-auto px-6 relative">
         
         {/* HEADER SECTION: Đưa về font-bold Inter, bỏ hẳn nút bo tròn */}
@@ -169,7 +169,7 @@ export default function CityHouseEcosystemSection() {
 
           <a
             href="/projects"
-            className="inline-flex w-fit items-center justify-center gap-3 border border-[#0F1A41]/20 bg-[#0F1A41] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] hover:border-amber-400 shadow-sm"
+            className="inline-flex rounded-xl w-fit items-center justify-center gap-3 border border-[#0F1A41]/20 bg-amber-400 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#082079] hover:border-amber-400 shadow-sm"
           >
             Xem tất cả
             <span className="text-sm leading-none">→</span>
@@ -177,7 +177,7 @@ export default function CityHouseEcosystemSection() {
         </div>
 
         {/* BỘ LỌC (FILTER BLOCK): Thiết kế vách ngăn phẳng (Architectural Box) không bo góc */}
-        <div className="border border-slate-200 bg-white p-0 rounded-none shadow-sm">
+        <div className="border rounded-tl-xl rounded-tr-xl border-slate-200 bg-white p-0 rounded-none shadow-sm">
           {/* Hàng Loại hình dự án */}
           <div className="flex gap-1 overflow-x-auto p-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex-wrap border-b border-slate-100">
             {typeTabs.map((type) => {
@@ -188,7 +188,7 @@ export default function CityHouseEcosystemSection() {
                   key={type}
                   type="button"
                   onClick={() => changeType(type)}
-                  className={`whitespace-nowrap px-4 py-2 text-[12px] font-bold uppercase tracking-wider rounded-none transition-all duration-300 ${
+                  className={`whitespace-nowrap rounded-xl px-4 py-2 text-[12px] font-bold uppercase tracking-wider rounded-none transition-all duration-300 ${
                     isActive
                       ? "bg-[#0F1A41] text-white"
                       : "bg-transparent text-[#0F1A41]/60 hover:bg-slate-50 hover:text-[#0F1A41]"
@@ -236,7 +236,7 @@ export default function CityHouseEcosystemSection() {
 
         {/* LƯỚI HIỂN THỊ DỰ ÁN: Không bo góc, ép sát khung ảnh mỏng */}
         {visibleProjects.length > 0 ? (
-          <div className="grid gap-0 border border-slate-200 divide-y md:divide-y-0 md:grid-cols-2 xl:grid-cols-4 xl:divide-x divide-slate-200 bg-white">
+          <div className="grid gap-0 overflow-hidden rounded-b-xl border border-slate-200 divide-y md:divide-y-0 md:grid-cols-2 xl:grid-cols-4 xl:divide-x divide-slate-200 bg-white">
             {visibleProjects.map((project) => (
               <article
                 key={project.id}
@@ -244,7 +244,7 @@ export default function CityHouseEcosystemSection() {
               >
                 <div>
                   {/* Khung ảnh vuông vức */}
-                  <div className="relative h-[240px] overflow-hidden rounded-none bg-slate-100 mb-5">
+                  <div className="relative h-[240px] rounded-xl overflow-hidden rounded-none bg-slate-100 mb-5">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -289,12 +289,12 @@ export default function CityHouseEcosystemSection() {
         )}
 
         {/* HỆ THỐNG PHÂN TRANG (PAGINATION): Hộp nút vuông đồng điệu */}
-        <div className="mt-12 flex justify-center">
-          <div className="inline-flex items-center border border-slate-200 bg-white p-0 rounded-none shadow-sm">
+        <div className="mt-12 flex  justify-center">
+          <div className="inline-flex rounded-xl items-center border border-slate-200 bg-white p-0 rounded-none shadow-sm">
             <button
               type="button"
               onClick={() => setPage((prev) => Math.max(1, prev - 1))}
-              className="flex h-11 w-11 items-center justify-center text-[#0F1A41]/50 border-r border-slate-200 transition-all hover:bg-slate-50 hover:text-[#0F1A41]"
+              className="flex h-11  w-11 items-center justify-center text-[#0F1A41]/50 border-r border-slate-200 transition-all hover:bg-slate-50 hover:text-[#0F1A41]"
               aria-label="Trang trước"
             >
               ‹

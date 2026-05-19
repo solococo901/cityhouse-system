@@ -39,7 +39,7 @@ export default function ServiceSection() {
   return (
     <section
       id="service"
-      className="relative w-full overflow-hidden bg-cover bg-center bg-fixed py-24 border-b border-slate-100 font-['Inter',_sans-serif]"
+      className="relative w-full overflow-hidden bg-cover bg-center bg-fixed py-10 border-b border-slate-100 font-['Inter',_sans-serif]"
       style={{
         backgroundImage: "url('/images/cityhouse-bg.webp')",
       }}
@@ -62,7 +62,7 @@ export default function ServiceSection() {
         </div>
 
         {/* LƯỚI KHỐI DỊCH VỤ VUÔNG GÓC (ARCHITECTURAL SLABS) */}
-        <div className="grid grid-cols-1 gap-0 border border-slate-200 divide-y md:grid-cols-3 md:divide-y-0 md:divide-x divide-slate-200 bg-white shadow-sm">
+        <div className="grid grid-cols-1 rounded-xl gap-0 divide-y md:grid-cols-3 md:divide-y-0 md:divide-x divide-slate-200 bg-white shadow-sm">
           {steps.map((step) => {
             const Icon = step.icon;
 
@@ -70,9 +70,9 @@ export default function ServiceSection() {
               <article
                 key={step.number}
                 className="
-                  group relative overflow-hidden rounded-none p-8 bg-white
+                  group relative overflow-hidden rounded-xl p-8 bg-white
                   transition-all duration-500 cursor-pointer
-                  hover:bg-[#0F1A41] min-h-[380px] flex flex-col justify-between
+                  hover:bg-[#0F1A41] flex flex-col justify-between
                 "
               >
                 <div>
@@ -116,7 +116,7 @@ export default function ServiceSection() {
         <div className="mt-14 text-center">
           <a
             href="#contact"
-            className="inline-flex border border-[#0F1A41]/20 bg-[#0F1A41] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] hover:border-amber-400 shadow-sm"
+            className="inline-flex rounded-xl border border-[#0F1A41]/20 bg-[#0F1A41] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] hover:border-amber-400 shadow-sm"
           >
             Xem Chi Tiết
           </a>

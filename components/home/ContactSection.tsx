@@ -20,13 +20,24 @@ export default function ContactSection() {
     setMessage("");
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+
+
+      const res = await fetch("http://localhost:3001/leads", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    
+      // const res = await fetch("/api/leads", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(form),
+      // });
 
       const data = await res.json();
 
@@ -120,7 +131,7 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-full max-w-md border border-[#0F1A41]/10 bg-[#0F1A41] p-6 md:p-8 rounded-none shadow-2xl relative text-white"
+              className="w-full max-w-md border rounded-xl border-[#0F1A41]/10 bg-[#0F1A41] p-6 md:p-8 rounded-none shadow-2xl relative text-white"
             >
               {/* Form giữ khối màu Navy đậm để tạo điểm nhấn tương phản cực mạnh (Pop-up effect) */}
               <div className="absolute right-0 top-0 h-12 w-12 border-r border-t border-amber-400/20" />
@@ -131,7 +142,7 @@ export default function ContactSection() {
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/40">
+                  <label className="text-[10px] font-bold  uppercase tracking-widest text-white/40">
                     Họ tên của bạn
                   </label>
                   <input
@@ -141,7 +152,7 @@ export default function ContactSection() {
                       setForm((prev) => ({ ...prev, full_name: e.target.value }))
                     }
                     placeholder="Nhập tên của bạn..."
-                    className="w-full border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                    className="w-full border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
                   />
                 </div>
 
@@ -157,7 +168,7 @@ export default function ContactSection() {
                         setForm((prev) => ({ ...prev, phone: e.target.value }))
                       }
                       placeholder="090 ..."
-                      className="w-full border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                      className="w-full  rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
                     />
                   </div>
 
@@ -172,7 +183,7 @@ export default function ContactSection() {
                         setForm((prev) => ({ ...prev, email: e.target.value }))
                       }
                       placeholder="your@email.com"
-                      className="w-full border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
                     />
                   </div>
                 </div>
@@ -188,12 +199,12 @@ export default function ContactSection() {
                       setForm((prev) => ({ ...prev, note: e.target.value }))
                     }
                     placeholder="Nội dung cần tư vấn..."
-                    className="w-full resize-none border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                    className="w-full resize-none border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
                   />
                 </div>
 
                 {message && (
-                  <div className="border border-white/10 bg-white/[0.04] px-4 py-3 text-xs leading-relaxed text-slate-300 rounded-none">
+                  <div className="border  rounded-xl border-red-500 bg-white/[0.04] px-4 py-3 text-xs leading-relaxed text-slate-300" role="alert">
                     {message}
                   </div>
                 )}
@@ -201,7 +212,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="group flex w-full items-center justify-center gap-3 bg-white text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="group flex w-full items-center rounded-xl justify-center gap-3 bg-white text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {loading ? "Đang gửi..." : "Gửi yêu cầu tư vấn"}
                   <svg

@@ -135,7 +135,7 @@ export default function ActiveProjectsSection() {
           <div className="max-w-[1280px] mx-auto px-4 md:px-6 py-12 md:py-20">
 
             {/* KHỐI BỘ LỌC ĐA TẦNG (ARCHITECTURAL FILTER BOX) */}
-            <div className="border border-slate-200 bg-white p-0 rounded-none shadow-sm mb-10">
+            <div className="border border-slate-200 rounded-xl bg-white p-0 rounded-none shadow-sm mb-10">
 
               {/* Tầng 1: Loại Hình Dự Án */}
               <div className="flex gap-1 overflow-x-auto p-3 border-b border-slate-100 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex-wrap">
@@ -144,7 +144,7 @@ export default function ActiveProjectsSection() {
                     key={type}
                     type="button"
                     onClick={() => setActiveType(type)}
-                    className={`whitespace-nowrap px-4 py-2 text-[12px] font-bold uppercase tracking-wider rounded-none transition-all duration-300 ${
+                    className={`whitespace-nowrap px-4 rounded-xl py-2 text-[12px] font-bold uppercase tracking-wider rounded-none transition-all duration-300 ${
                       type === activeType
                         ? "bg-[#0F1A41] text-white"
                         : "bg-transparent text-[#0F1A41]/60 hover:bg-slate-50 hover:text-[#0F1A41]"
@@ -162,7 +162,7 @@ export default function ActiveProjectsSection() {
                     key={brand}
                     type="button"
                     onClick={() => setActiveBrand(brand)}
-                    className={`whitespace-nowrap px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest rounded-none border transition-all duration-300 ${
+                    className={`whitespace-nowrap rounded-xl px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest rounded-none border transition-all duration-300 ${
                       brand === activeBrand
                         ? "border-[#0F1A41] bg-[#0F1A41] text-white"
                         : "border-slate-200 bg-white text-slate-500 hover:border-[#0F1A41] hover:text-[#0F1A41]"
@@ -196,7 +196,7 @@ export default function ActiveProjectsSection() {
 
             {/* LƯỚI TRIỂN LÃM DỰ ÁN (GALLERY GRID) */}
             {filteredProjects.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0 border border-slate-200 bg-white divide-y md:divide-y-0 md:border-b-0">
+              <div className="grid rounded-xl overflow-hidden grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0 border border-slate-200 bg-white divide-y md:divide-y-0 md:border-b-0">
                 {filteredProjects.map((project) => (
                   <Link href={`/dang-hoat-dong/${project.id}`} key={project.id} className="block w-full">
                     <article
@@ -207,9 +207,9 @@ export default function ActiveProjectsSection() {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="h-full rounded-xl overflow-hidden w-full object-cover transition-transform duration-700 group-hover:scale-105"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/30 via-transparent to-transparent opacity-60" />
+                          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-[#0F1A41]/30 via-transparent to-transparent opacity-60" />
 
                           <div className="absolute left-0 top-0 bg-white/90 backdrop-blur-sm px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-[#0F1A41] rounded-none border-r border-b border-slate-200">
                             {project.brand}

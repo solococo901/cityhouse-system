@@ -45,12 +45,9 @@ export default function HeroSection() {
       <div className="relative z-10 flex min-h-[calc(100vh-76px)] flex-col justify-between">
         <div className="max-w-[1280px] w-full mx-auto px-6 text-center pt-20 md:pt-28 my-auto">
           {/* Tag giới thiệu nhỏ */}
-          <div className="mb-6 inline-flex border border-white/20 bg-[#0F1A41]/60 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.35em] text-amber-400 rounded-none backdrop-blur-md">
-            CityHouse More
-          </div>
 
           {/* Tiêu đề chính: Thêm drop-shadow mạnh hơn một chút để text luôn "nổi" trên nền video chuyển động */}
-          <h1 className="mx-auto max-w-5xl text-5xl font-bold uppercase leading-[1.15] tracking-tight md:text-7xl lg:text-8xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+          <h1 className="mx-auto max-w-5xl text-4xl font-bold uppercase leading-[1.15] tracking-tight md:text-6xl lg:text-7xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
             Quản Lý Gia Sản <br className="hidden md:block" /> 
             <span className="text-amber-100/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
               Vững Bền Gia Tộc
@@ -66,16 +63,11 @@ export default function HeroSection() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#portfolio"
-              className="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] bg-white text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] shadow-xl"
+              className="w-full sm:w-auto rounded-xl px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] bg-amber-400 text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#0F1A41] shadow-xl"
             >
-              Khám phá hệ thống
+              Liên Hệ Hợp Tác
             </a>
-            <a
-              href="#contact"
-              className="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 bg-[#0F1A41]/40 text-white rounded-none backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white"
-            >
-              Liên hệ tư vấn
-            </a>
+            
           </div>
         </div>
 

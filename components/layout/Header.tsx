@@ -53,16 +53,16 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <div className="flex items-center border border-white/20 bg-[#0F1A41]">
-            <button className="px-3 py-1.5 text-[11px] font-bold bg-white text-[#0F1A41]">
+          <div className="flex items-center rounded-xl border border-white/20 bg-[#0F1A41]">
+            <button className="px-3 py-1.5 text-[11px]  rounded-xl font-bold bg-white text-[#0F1A41]">
               VI
             </button>
-            <button className="px-3 py-1.5 text-[11px] font-bold text-white/60 hover:text-white hover:bg-white/5 transition duration-300">
+            <button className="px-3 py-1.5 text-[11px] rounded-xl  font-bold text-white/60 hover:text-white hover:bg-white/5 transition duration-300">
               EN
             </button>
           </div>
 
-          <button className="border border-white/40 px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white hover:text-[#0F1A41] hover:border-white rounded-none">
+          <button className="border border-white/40 rounded-xl  px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white hover:text-[#0F1A41] hover:border-white rounded-none">
             Liên Hệ Ngay
           </button>
         </div>
