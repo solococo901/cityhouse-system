@@ -58,7 +58,7 @@ export default function CaseStudies() {
   const [activeCase, setActiveCase] = useState(0);
 
   return (
-    <section className="relative w-full bg-white text-[#0F1A41] py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full bg-white text-[#0F1A41] py-10 px-6 md:px-16 overflow-hidden">
       
       <style jsx>{`
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -66,7 +66,7 @@ export default function CaseStudies() {
       `}</style>
 
       {/* Header Section */}
-      <div className="container mx-auto mb-12 md:mb-20">
+      <div className="container mx-auto mb-12 md:mb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 items-end gap-8">
           <div className="md:col-span-8">
             <span className="text-[10px] tracking-[0.5em] uppercase text-blue-600 font-bold mb-4 block">Dự án đã thực hiện</span>
@@ -96,7 +96,7 @@ export default function CaseStudies() {
                   backgroundColor: activeCase === index ? "rgba(37, 99, 235, 0.05)" : "rgba(255, 255, 255, 0)",
                   borderColor: activeCase === index ? "#2563eb" : "rgba(0, 0, 0, 0.05)"
                 }}
-                className="min-w-[200px] lg:min-w-full text-left p-5 transition-all border block group relative"
+                className="min-w-[200px] rounded-xl lg:min-w-full text-left p-5 transition-all border block group relative"
               >
                 <span className={`text-[10px] font-mono block mb-1 transition-opacity duration-300 ${activeCase === index ? "opacity-100 text-blue-600" : "opacity-40"}`}>
                   [{project.id}]
@@ -125,7 +125,7 @@ export default function CaseStudies() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
-                className="border border-slate-200 p-2 bg-slate-50 shadow-xl"
+                className="border border-slate-200 rounded-xl p-2 bg-slate-50 shadow-xl"
               >
                 <ReactCompareSlider
                   itemOne={<ReactCompareSliderImage src={cases[activeCase].before} alt="Trước" className="grayscale opacity-80" />}

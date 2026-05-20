@@ -53,7 +53,7 @@ const stats = [
 
 export default function ExecutionPower() {
   return (
-    <section className="relative w-full bg-[#0F1A41] text-white py-32 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full bg-[#0F1A41] text-white py-10 px-6 md:px-16 overflow-hidden">
       
       {/* Background Grid Lines - Làm mờ đi để tạo cảm giác sang trọng */}
       <div className="absolute inset-0 pointer-events-none">
@@ -91,17 +91,17 @@ export default function ExecutionPower() {
           </div>
 
           {/* HỆ THỐNG SỐ LIỆU BÊN PHẢI */}
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10 border border-white/10">
+          <div className="md:col-span-8 grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 gap-px bg-white/10 border border-white/10">
             {stats.map((stat, index) => (
               <motion.div 
                 key={index}
                 whileHover={{ backgroundColor: "#152354", y: -5 }}
-                className="bg-[#0F1A41] p-12 flex flex-col group transition-all duration-500 cursor-default"
+                className="bg-[#0F1A41]  p-12 flex flex-col group transition-all duration-500 cursor-default"
               >
                 {/* Icon màu xanh sáng hơn để nổi bật trên nền tối */}
-                <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
+                {/* <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
                   {stat.icon}
-                </div>
+                </div> */}
 
                 <div className="mb-4">
                   <span className="text-6xl font-light tracking-tighter text-white">

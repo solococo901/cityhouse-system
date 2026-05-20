@@ -30,7 +30,7 @@ const steps = [
 
 export default function StrategicRoadmap() {
   return (
-    <section className="relative w-full bg-white text-[#0F1A41] py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full bg-white text-[#0F1A41] py-10 px-6 md:px-16 overflow-hidden">
       
       {/* Background Decor - Blueprint Grid nhẹ */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
@@ -43,7 +43,7 @@ export default function StrategicRoadmap() {
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="mb-20">
+        <div className="mb-10">
           <span className="text-[10px] tracking-[0.5em] uppercase text-blue-600 font-bold mb-4 block">
             KẾ HOẠCH THỰC HIỆN 
           </span>
@@ -53,7 +53,7 @@ export default function StrategicRoadmap() {
         </div>
 
         {/* 4 Columns Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200">
+        <div className="grid grid-cols-1 rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -61,7 +61,7 @@ export default function StrategicRoadmap() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-10 group hover:bg-[#0F1A41] transition-all duration-500 cursor-default"
+              className="bg-white p-10  group hover:bg-[#0F1A41] transition-all duration-500 cursor-default"
             >
               {/* Step ID */}
               <div className="flex justify-between items-start mb-12">

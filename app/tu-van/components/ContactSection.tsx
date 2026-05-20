@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function ContactSection() {
   return (
-    <section className="relative w-full bg-[#F4F4F4] text-[#0F1A41] py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full bg-[#F4F4F4] text-[#0F1A41] py-10 px-6 md:px-16 overflow-hidden">
       
       {/* Background Decor: Hệ lưới Blueprint tối mờ trên nền sáng */}
       <div className="absolute inset-0 z-0">
@@ -58,10 +58,10 @@ export default function ContactSection() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="w-full max-w-xl bg-white border border-[#0F1A41]/10 p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] relative overflow-hidden group"
+              className="w-full max-w-xl bg-white rounded-xl overflow-hidden border border-[#0F1A41]/10 p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] relative overflow-hidden group"
             >
               {/* Trang trí góc Form - Accent Blue */}
-              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-blue-600/20"></div>
+              <div className="absolute rounded-tr-xl top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-blue-600/20"></div>
               
               <h3 className="text-2xl font-bold uppercase tracking-tight mb-8 text-[#0F1A41]">
                 Tham quan & Hợp tác

@@ -30,7 +30,7 @@ const posts = [
 
 export default function NewsSection() {
   return (
-    <section id="news" className="w-full bg-[#FDFDFD] py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
+    <section id="news" className="w-full bg-[#FDFDFD] py-10 border-b border-slate-100 font-['Inter',_sans-serif]">
       <div className="max-w-[1280px] mx-auto px-6">
         
         {/* HEADER SECTION: Đưa về chuẩn font-bold Inter, bỏ gạch chân mờ cũ */}

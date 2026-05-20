@@ -2,8 +2,8 @@
 
 const featureItems = [
   {
-    eyebrow: "Quy mô",
-    value: "30+ Tòa Nhà",
+    eyebrow: "Tòa Nhà",
+    value: "30+",
     description: "800+ phòng cao cấp",
   },
   {
@@ -82,13 +82,13 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,191,36,0.06),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative z-10 flex flex-col items-center justify-center">
-                  <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-amber-400/80">
-                    {item.eyebrow}
-                  </div>
-                  <div className="text-[36px] font-bold leading-none tracking-tight text-white md:text-[40px] lg:text-[46px]">
+                   <div className="text-[36px] font-bold leading-none tracking-tight text-white md:text-[40px] lg:text-[46px]">
                     {item.value}
                   </div>
-                  <div className="mt-3 text-xs font-light tracking-wide text-slate-300">
+                  <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.25em] text-amber-400/80">
+                    {item.eyebrow}
+                  </div>
+                  <div className="mt-3 font-light tracking-wide text-slate-300">
                     {item.description}
                   </div>
                 </div>

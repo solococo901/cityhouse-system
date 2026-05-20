@@ -64,7 +64,7 @@ export default function BrandShowcase() {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0F1A41] text-white py-24 overflow-hidden border-t border-white/5">
+    <section className="relative w-full bg-[#0F1A41] text-white py-10 overflow-hidden border-t border-white/5">
       
       {/* Background Decor */}
       <div className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none">
@@ -94,7 +94,7 @@ export default function BrandShowcase() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 pointer-events-none hidden md:flex flex-col items-center gap-2"
+            className="absolute right-4  top-1/2 -translate-y-1/2 z-20 pointer-events-none hidden md:flex flex-col items-center gap-2"
           >
             <motion.div 
               animate={{ x: [0, 10, 0] }} 
@@ -121,7 +121,7 @@ export default function BrandShowcase() {
               className="flex-shrink-0 w-[280px] md:w-[400px]"
             >
               {/* Image Frame */}
-              <div className="relative aspect-[4/5] overflow-hidden border border-white/10 mb-8 bg-white/5 shadow-2xl">
+              <div className="relative rounded-xl aspect-[4/5] overflow-hidden border border-white/10 mb-8 bg-white/5 shadow-2xl">
                 <img 
                   src={brand.img} 
                   alt={brand.name} 

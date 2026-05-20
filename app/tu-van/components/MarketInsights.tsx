@@ -53,7 +53,7 @@ export default function MarketInsights() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex-1 bg-white p-8 border-l-8 border-red-600 shadow-[15px_15px_40px_rgba(0,0,0,0.04)] flex flex-col justify-center group"
+                  className="flex-1 bg-white p-8 rounded-xl border-l-8 border-red-600 shadow-[15px_15px_40px_rgba(0,0,0,0.04)] flex flex-col justify-center group"
                 >
                   <h3 className="text-xl font-inter font-bold uppercase mb-3  group-hover:text-red-600 transition-colors">
                     {item.title}
@@ -78,7 +78,7 @@ export default function MarketInsights() {
                 <motion.div
                   key={i}
                   whileHover={{ backgroundColor: "#0F1A41", color: "#FFFFFF" }}
-                  className="flex-1 p-8 border border-[#0F1A41]/10 flex flex-col justify-center gap-3 transition-all duration-500 group cursor-pointer bg-white/40 backdrop-blur-sm"
+                  className="flex-1 p-8 border rounded-xl border-[#0F1A41]/10 flex flex-col justify-center gap-3 transition-all duration-500 group cursor-pointer bg-white/40 backdrop-blur-sm"
                 >
                   <div className="flex justify-between items-start">
                     <span className="text-4xl font-bold tracking-tighter opacity-10 group-hover:opacity-30 italic">

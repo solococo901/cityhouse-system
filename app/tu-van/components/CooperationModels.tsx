@@ -30,7 +30,7 @@ const cooperationModels = [
 
 export default function CooperationModels() {
   return (
-    <section className="relative w-full bg-[#0F1A41] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full bg-[#0F1A41] text-white py-10 px-6 md:px-16 overflow-hidden">
       
       {/* Background Decor - Blueprint Grid (Trắng mờ trên nền xanh) */}
       <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none">
@@ -43,7 +43,7 @@ export default function CooperationModels() {
 
       <div className="container mx-auto relative z-10">
         {/* Header Section */}
-        <div className="mb-20">
+        <div className="mb-10">
           <span className="text-[10px] tracking-[0.5em] uppercase text-blue-400 font-bold mb-4 block">
             Mô hình hợp tác
           </span>
@@ -62,7 +62,7 @@ export default function CooperationModels() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
               whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.03)" }}
-              className="relative p-10 flex flex-col justify-between min-h-[450px] border-r border-b border-white/10 last:border-r-0 group cursor-pointer transition-all duration-500"
+              className="relative p-10 flex flex-col  min-h-[250px] border-r border-b border-white/10 last:border-r-0 group cursor-pointer transition-all duration-500"
             >
               {/* ID Đồ họa lớn phía sau */}
               <span className="absolute -bottom-6 -right-2 text-[140px] font-black italic opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none">
@@ -71,14 +71,14 @@ export default function CooperationModels() {
 
               {/* Nội dung phía trên */}
               <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-10">
+                <div className="flex items-center gap-4 mb-2">
                   <span className="text-[10px] font-mono font-bold px-2 py-1 border border-blue-400/30 text-blue-400">
                     {item.id}
                   </span>
                   <div className="h-[1px] w-10 bg-blue-500/50 group-hover:w-16 transition-all duration-500"></div>
                 </div>
 
-                <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold uppercase tracking-tight group-hover:text-blue-400 transition-colors">
                   {item.title}
                 </h3>
                 
@@ -88,7 +88,7 @@ export default function CooperationModels() {
               </div>
 
               {/* Nội dung phía dưới */}
-              <div className="relative z-10 mt-auto">
+              <div className="relative">
                 <p className="text-sm leading-relaxed text-white/50 group-hover:text-white/80 font-light transition-colors max-w-[90%]">
                   {item.desc}
                 </p>

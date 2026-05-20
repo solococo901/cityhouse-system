@@ -162,7 +162,7 @@ export default function CityHouseEcosystemSection() {
         {/* HEADER SECTION: Đưa về font-bold Inter, bỏ hẳn nút bo tròn */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl"> 
-            <h2 className="text-3xl font-bold uppercase leading-[1.1] tracking-tight text-[#0F1A41] md:text-5xl">
+            <h2 className="text-2xl font-bold uppercase leading-[1.1] tracking-tight text-[#0F1A41] md:text-3xl">
               Hệ sinh thái bất động sản <span className="block mt-1 text-slate-400">dòng tiền</span>
             </h2>
           </div>

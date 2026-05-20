@@ -50,8 +50,8 @@ export default function ServiceSection() {
       <div className="max-w-[1280px] mx-auto px-6 relative z-10">
         
         {/* TIÊU ĐỀ SECTION */}
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-[#0F1A41] md:text-5xl">
+        <div className="mb-10 text-center">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-[#0F1A41] md:text-4xl">
             Đồng Hành Cùng Chủ Đầu Tư
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-xs leading-relaxed text-slate-500 font-light">

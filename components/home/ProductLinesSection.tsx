@@ -30,13 +30,13 @@ const items = [
 
 export default function ProductLinesSection() {
   return (
-    <section id="products" className="w-full bg-[#FDFDFD]  py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
+    <section id="products" className="w-full bg-[#FDFDFD]  py-10 border-b border-slate-100 font-['Inter',_sans-serif]">
       <div className="max-w-[1280px] mx-auto px-6">
         
         {/* TIÊU ĐỀ SECTION - Ép sát khoảng trắng, tracking rộng */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center">
          
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-[#0F1A41] md:text-5xl">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-[#0F1A41] md:text-4xl">
             5 Dòng Sản Phẩm Định Hình
           </h2>
           <div className="w-12 h-[2px] bg-[#0F1A41] mx-auto mt-6" />

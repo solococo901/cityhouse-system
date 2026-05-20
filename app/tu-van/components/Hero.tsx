@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
 
             {/* Background Graphic - Khối kiến trúc chìm */}
-            <div className="absolute right-[-5%] top-[10%] w-[65%] h-[80%] opacity-90  pointer-events-none z-0">
+            <div className="absolute right-[-5%] top-[6%] w-[65%] h-[80%] opacity-90  pointer-events-none z-0">
                 <video
                     src="/videos/video-intro.mp4"
                     autoPlay
@@ -80,7 +80,7 @@ export default function Hero() {
             </div>
 
             {/* Footer Numbers - Chỉ số minh bạch */}
-            <div className="z-10 flex flex-wrap gap-12 border-t border-white/5 pt-8">
+            <div className="z-10 mt-3 flex flex-wrap gap-12 border-t border-white/5">
                 <div>
                     <p className="text-[9px] uppercase tracking-[0.2em] text-gray-500 mb-2 font-medium">Tòa Nhà</p>
                     <p className="text-3xl font-light tracking-tighter">35<span className="text-sm ml-1">+</span></p>

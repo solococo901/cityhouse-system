@@ -212,7 +212,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="group flex w-full items-center rounded-xl justify-center gap-3 bg-white text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="group flex w-full items-center rounded-xl justify-center gap-3 bg-amber-400 text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {loading ? "Đang gửi..." : "Gửi yêu cầu tư vấn"}
                   <svg
