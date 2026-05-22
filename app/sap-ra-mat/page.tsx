@@ -229,7 +229,7 @@ export default function ActiveProjectsSection() {
                         <span className="text-[9px] uppercase tracking-widest text-slate-400">
                           {project.type}
                         </span>
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#0F1A41] group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5">
+                        <span className="text-xs font-bold uppercase tracking-wider text-amber-500 group-hover:text-amber-200 transition-colors duration-300 flex items-center gap-1.5">
                           Chi tiết
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transition-transform duration-300 group-hover:translate-x-1">
                             <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
