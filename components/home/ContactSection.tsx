@@ -152,7 +152,7 @@ export default function ContactSection() {
                       setForm((prev) => ({ ...prev, full_name: e.target.value }))
                     }
                     placeholder="Nhập tên của bạn..."
-                    className="w-full border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                    className="w-full border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/20 focus:border-[#FAA269] focus:bg-white/10"
                   />
                 </div>
 
@@ -168,7 +168,7 @@ export default function ContactSection() {
                         setForm((prev) => ({ ...prev, phone: e.target.value }))
                       }
                       placeholder="090 ..."
-                      className="w-full  rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                      className="w-full  rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-[#FAA269] focus:bg-white/10"
                     />
                   </div>
 
@@ -183,7 +183,7 @@ export default function ContactSection() {
                         setForm((prev) => ({ ...prev, email: e.target.value }))
                       }
                       placeholder="your@email.com"
-                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-[#FAA269] focus:bg-white/10"
                     />
                   </div>
                 </div>
@@ -199,7 +199,7 @@ export default function ContactSection() {
                       setForm((prev) => ({ ...prev, note: e.target.value }))
                     }
                     placeholder="Nội dung cần tư vấn..."
-                    className="w-full resize-none border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-amber-400 focus:bg-white/10"
+                    className="w-full resize-none border rounded-xl border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white rounded-none outline-none transition-all placeholder:text-white/20 focus:border-[#FAA269] focus:bg-white/10"
                   />
                 </div>
 
@@ -212,7 +212,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="group flex w-full items-center rounded-xl justify-center gap-3 bg-amber-400 text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="group flex w-full items-center rounded-xl justify-center gap-3 bg-[#FAA269] text-[#0F1A41] py-4.5 text-xs font-bold uppercase tracking-[0.2em] rounded-none transition-all duration-300 hover:bg-[#f8741d] hover:text-[#0F1A41] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {loading ? "Đang gửi..." : "Gửi yêu cầu tư vấn"}
                   <svg

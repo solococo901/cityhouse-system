@@ -22,7 +22,7 @@ export default function Header() {
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#0F1A41]/90 text-white backdrop-blur-md font-['Inter',_sans-serif]">
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6">
         <Link href="/" className="leading-none group">
-          <div className="text-[22px] font-extrabold tracking-[0.15em] transition-colors duration-300 group-hover:text-amber-400">
+          <div className="text-[22px] font-extrabold tracking-[0.15em] transition-colors duration-300 group-hover:text-[#FAA269]">
             CITYHOUSE
           </div>
           <div className="mt-1 text-[7.5px] tracking-[0.38em] text-white/60 font-medium">
@@ -41,9 +41,9 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:bg-amber-400 after:transition-all after:duration-300 ${
+                className={`relative transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:bg-[#FAA269] after:transition-all after:duration-300 ${
                   isActive
-                    ? "text-amber-400 after:w-full" // Đang Active: Chữ vàng, gạch chân full
+                    ? "text-[#FAA269] after:w-full" // Đang Active: Chữ vàng, gạch chân full
                     : "text-white/70 hover:text-white after:w-0 hover:after:w-full" // Bình thường: Chữ xám, trỏ chuột mới gạch chân
                 }`}
               >

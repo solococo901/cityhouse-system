@@ -49,7 +49,7 @@ export default function HeroSection() {
           {/* Tiêu đề chính: Thêm drop-shadow mạnh hơn một chút để text luôn "nổi" trên nền video chuyển động */}
           <h1 className="mx-auto max-w-5xl text-4xl font-bold uppercase leading-[1.15] tracking-tight md:text-6xl lg:text-7xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
             Quản Lý Gia Sản <br className="hidden md:block" /> 
-            <span className="text-amber-100/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
+            <span className="text-[#FAA269] drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
               Vững Bền Gia Tộc
             </span>
           </h1>
@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#portfolio"
-              className="w-full sm:w-auto rounded-xl px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] bg-amber-400 text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#0F1A41] shadow-xl"
+              className="w-full sm:w-auto rounded-xl px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] bg-[#FAA269] text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-[#f07925] hover:text-[#0F1A41] shadow-xl"
             >
               Liên Hệ Hợp Tác
             </a>

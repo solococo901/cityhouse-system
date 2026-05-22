@@ -4,26 +4,26 @@ import { motion } from "framer-motion";
 const steps = [
   {
     id: "01",
-    title: "Khảo sát Bất động sản",
-    desc: "Đánh giá chi tiết về vị trí, quy mô và phân tích tiềm năng khai thác thực tế của tài sản.",
+    title: "Khảo sát, xác định mô hình phù hợp",
+    desc: "- Đánh giá vị trí, qui mô",
+    desc1: "- Phân tích tiềm năng khai thác",
+    desc2: "- Đề xuất phân khúc sản phẩm tối ưu",
     tag: ""
   },
   {
     id: "02",
-    title: "XÁC ĐỊNH MÔ HÌNH PHÙ HỢP NHẤT",
-    desc: "Đề xuất phân khúc sản phẩm phù hợp, đảm bảo tính bền vững và lợi nhuận tối ưu.",
+    title: "Triển khai vận hành",
+    desc: "- Giám sát quá trình nghiệm thu, bàn giao",
+    desc1: "- Thiết lập bộ máy nhân sự  và quy trình",
+    desc2: "- Quảng cáo, tiếp thị ",
     tag: ""
   },
   {
     id: "03",
-    title: "Triển khai vận hành",
-    desc: "Giám sát quá trình bàn giao, thiết lập bộ máy nhân sự và quy trình vận hành chuyên nghiệp.",
-    tag: ""
-  },
-  {
-    id: "04",
     title: "Tối ưu dòng tiền",
-    desc: "Liên tục tinh chỉnh quy trình và dịch vụ để gia tăng hiệu quả kinh doanh thực tế.",
+    desc: "- Liên tục tinh chỉnh qui trình & dịch vụ",
+    desc1: "- Tiết giảm chi phí thực tế",
+    desc2: "- Cập nhật các xu hướng mới ",
     tag: ""
   }
 ];
@@ -50,42 +50,53 @@ export default function StrategicRoadmap() {
         </div>
 
         {/* 4 Columns Layout */}
-        <div className="grid grid-cols-1 rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white p-10  group hover:bg-[#0F1A41] transition-all duration-500 cursor-default"
-            >
-              {/* Step ID */}
-              <div className="flex justify-between items-start mb-12">
-                <span className="font-mono text-sm text-[#FAA269] group-hover:text-[#ff761a] transition-colors">
-                  [{step.id}]
-                </span>
-                <div className="h-px w-12 bg-slate-200 group-hover:bg-white/20 transition-all group-hover:w-16"></div>
-              </div>
+        <div className="grid grid-cols-1 rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200">
+  {steps.map((step, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="bg-white p-10 group hover:bg-[#0F1A41] transition-all duration-500 cursor-default"
+    >
+      {/* Step ID */}
+      <div className="flex justify-between items-start mb-12">
+        <span className="font-mono text-sm text-[#FAA269] group-hover:text-[#ff761a] transition-colors">
+          [{step.id}]
+        </span>
 
-              {/* Content */}
-              <div className="space-y-6">
-                <span className="text-[8px] uppercase tracking-[0.3em] text-slate-400 group-hover:text-white/40 font-bold">
-                  {step.tag}
-                </span>
-                <h3 className="text-xl font-bold uppercase tracking-tight group-hover:text-white transition-colors leading-tight">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-slate-500 group-hover:text-white/60 font-light leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
+        <div className="h-px w-12 bg-slate-200 group-hover:bg-white/20 transition-all group-hover:w-16"></div>
+      </div>
 
-              {/* Bottom Decorative Line */}
-              <div className="mt-12 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-700"></div>
-            </motion.div>
-          ))}
-        </div>
+      {/* Content */}
+      <div className="space-y-6">
+        <span className="text-[8px] uppercase tracking-[0.3em] text-slate-400 group-hover:text-white/40 font-bold">
+          {step.tag}
+        </span>
+
+        <h3 className="text-xl font-bold uppercase tracking-tight group-hover:text-white transition-colors leading-tight">
+          {step.title}
+        </h3>
+
+        <p className="text-sm text-slate-500 group-hover:text-white/60 font-light leading-relaxed">
+          {step.desc}
+        </p>
+
+        <p className="text-sm text-slate-500 group-hover:text-white/60 font-light leading-relaxed">
+          {step.desc1}
+        </p>
+
+        <p className="text-sm text-slate-500 group-hover:text-white/60 font-light leading-relaxed">
+          {step.desc2}
+        </p>
+      </div>
+
+      {/* Bottom Decorative Line */}
+      <div className="mt-12 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-700"></div>
+    </motion.div>
+  ))}
+</div>
 
         {/* Footer Note */}
         <div className="mt-16 flex items-center gap-4">

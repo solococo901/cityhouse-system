@@ -3,15 +3,14 @@ import { motion } from "framer-motion";
 
 export default function MarketInsights() {
   const risks = [
-    { title: "Định vị sai sản phẩm", desc: "Lựa chọn phân khúc không tương thích với vị trí và nhu cầu của khách hàng mục tiêu sẽ triệt tiêu khả năng cạnh tranh của tòa nhà." },
-    { title: "Phát sinh tăng vốn đầu tư", desc: "Các biến số phát sinh trong thực tế thường gây phát sinh 15-30% ngân sách dự kiến, làm kéo dài thời gian hoàn vốn (ROI)." },
-    { title: "Lợi nhuận không bền vững", desc: "Marketing và Vận hành không tối ưu khiến dòng tiền không ổn định, tài sản nhanh chóng xuống cấp và mất dần vị thế." }
+    { num:"01", title: "Đầu tư Tòa nhà mới không hiệu quả", desc: "- Thiết kế không đúng phân khúc khách hàng" , desc2: "- Phát sinh tăng vốn đầu tư xây dựng" },
+    { num:"02", title: "Tòa nhà cũ lợi nhuận thấp ", desc: "- Nội thất không đẹp / cũ đã xuống cấp", desc2: "- Vận hành theo tiêu chuẩn thấp " }
+   
   ];
 
   const solutions = [
-    { num: "01", title: "Khác biệt hóa", desc: "Nghiên cứu và định hình giá trị độc đáo và bền vững cho dự án" },
-    { num: "02", title: "Tối ưu giá trị kép", desc: "Tối ưu song song cả Dòng tiền thu nhập và Giá trị bất động sản" },
-    { num: "03", title: "Quản lý gia sản", desc: "Tài sản được nhìn dưới góc độ Gia sản lâu dài qua nhiều thế hệ" }
+    { num: "01", title: "Tư vấn mô hình tối ưu giá trị kép", desc: "- Dòng tiền lợi nhuận khai thác" , desc2:"- Giá trị gia tăng của chính bất động sản"},
+    { num: "02", title: "Đầu tư cải tạo mới để tăng hiệu quả ", desc: "- Sửa chữa Nội thất theo xu hướng mới" , desc2:"- Nâng cấp tiêu chuẩn vận hành " },
   ];
 
   return (
@@ -29,10 +28,9 @@ export default function MarketInsights() {
       <div className="container mx-auto relative z-10">
         {/* Header Section */}
         <div className="mb-20">
-          <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-blue-600 mb-4 block">Phân tích chiến lược</span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.85]">
-            RỦI RO <span className="font-light italic opacity-40">&</span> <br />
-            GIẢI PHÁP
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[1.1]">
+            KHÓ KHĂN <span className="font-light italic opacity-40"> </span> <br />
+            CỦA CHỦ TÒA NHÀ 
           </h2>
         </div>
 
@@ -55,11 +53,19 @@ export default function MarketInsights() {
                   transition={{ delay: i * 0.1 }}
                   className="flex-1 bg-white p-8 rounded-xl border-l-8 border-red-600 shadow-[15px_15px_40px_rgba(0,0,0,0.04)] flex flex-col justify-center group"
                 >
-                  <h3 className="text-xl font-inter font-bold uppercase mb-3  group-hover:text-red-600 transition-colors">
+                  <div className="flex justify-between items-start">
+                    <span className="text-4xl text-[#ff0000] font-bold tracking-tighter opacity-50 group-hover:opacity-40 italic">
+                      {item.num}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-inter text-[#ff0000] font-bold uppercase mt-2 mb-3  group-hover:text-red-600 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-[#0F1A41]/70 font-medium">
                     {item.desc}
+                  </p>
+                  <p className="text-sm leading-relaxed text-[#0F1A41]/70 font-medium">
+                    {item.desc2}
                   </p>
                 </motion.div>
               ))}
@@ -88,6 +94,9 @@ export default function MarketInsights() {
                   <h4 className="text-lg font-bold uppercase tracking-tight">{item.title}</h4>
                   <p className="text-sm opacity-60 group-hover:opacity-80 leading-relaxed italic">
                     {item.desc}
+                  </p>
+                  <p className="text-sm opacity-60 group-hover:opacity-80 leading-relaxed italic">
+                    {item.desc2}
                   </p>
                 </motion.div>
               ))}
