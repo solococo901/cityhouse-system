@@ -37,7 +37,7 @@ export default function Hero() {
                     >
                         <h1 className="text-[8vw] md:text-[7vw] font-bold leading-[1] tracking-tighter uppercase">
                             Quản lý gia sản <br />
-                            <span className="font-light italic text-blue-200/80">Vững bền gia tộc</span>
+                            <span className="font-light italic text-[#FAA269]">Vững bền gia tộc</span>
                         </h1>
                     </motion.div>
 
@@ -46,7 +46,7 @@ export default function Hero() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.8 }}
-                            className="text-xs md:text-sm text-gray-300 leading-relaxed tracking-wide"
+                            className="md:text-[18px]  text-gray-300 leading-relaxed tracking-wide"
                         >
                             Nền tảng quản lý bất động sản dòng tiền
                             Căn hộ - Khách sạn - Văn phòng - Resort.
@@ -82,15 +82,15 @@ export default function Hero() {
             {/* Footer Numbers - Chỉ số minh bạch */}
             <div className="z-10 mt-3 flex flex-wrap gap-12 border-t border-white/5">
                 <div>
-                    <p className="text-[9px] uppercase tracking-[0.2em] text-gray-500 mb-2 font-medium">Tòa Nhà</p>
+                    <p className="text-[9px] uppercase tracking-[0.2em] text-[#FAA269] mb-2 font-medium">Tòa Nhà</p>
                     <p className="text-3xl font-light tracking-tighter">35<span className="text-sm ml-1">+</span></p>
                 </div>
                 <div>
-                    <p className="text-[9px] uppercase tracking-[0.2em] text-gray-500 mb-2 font-medium">Phòng</p>
+                    <p className="text-[9px] uppercase tracking-[0.2em] text-[#FAA269] mb-2 font-medium">Phòng</p>
                     <p className="text-3xl font-light tracking-tighter">1000<span className="text-sm ml-1">+</span></p>
                 </div>
                 <div>
-                    <p className="text-[9px] uppercase tracking-[0.2em] text-gray-500 mb-2 font-medium">Tài Sản Đang Quản</p>
+                    <p className="text-[9px] uppercase tracking-[0.2em] text-[#FAA269] mb-2 font-medium">Tài Sản Đang Quản Lý</p>
                     <p className="text-3xl font-light tracking-tighter">3.300<span className="text-sm ml-1">+ tỷ</span></p>
                 </div>
 

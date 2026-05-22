@@ -77,9 +77,6 @@ export default function BrandShowcase() {
 
       {/* Header */}
       <div className="container mx-auto px-6 md:px-16 mb-16 relative z-10">
-        <span className="text-[10px] tracking-[0.5em] uppercase text-blue-400 font-bold mb-4 block">
-          Các dòng sản phẩm
-        </span>
         <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter leading-[0.9]">
           Hệ sinh thái <br /> <span className="font-light italic text-white/40">Thương hiệu.</span>
         </h2>
@@ -108,56 +105,76 @@ export default function BrandShowcase() {
         )}
 
         {/* Scroll Area */}
-        <div 
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex gap-8 px-6 md:px-16 overflow-x-auto cursor-grab active:cursor-grabbing select-none
-                     [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
-                     relative z-10"
-        >
-          {brands.map((brand, i) => (
-            <div 
-              key={i}
-              className="flex-shrink-0 w-[280px] md:w-[400px]"
-            >
-              {/* Image Frame */}
-              <div className="relative rounded-xl aspect-[4/5] overflow-hidden border border-white/10 mb-8 bg-white/5 shadow-2xl">
-                <img 
-                  src={brand.img} 
-                  alt={brand.name} 
-                  draggable={false}
-                  className="w-full h-full object-cover grayscale-[0.2] brightness-90"
-                />
-                <div className="absolute top-0 left-0 bg-white text-[#0F1A41] px-4 py-2 text-[10px] font-mono font-bold">
-                  {brand.id}
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-[0.2em] border border-white/20 shadow-sm">
-                    {brand.tag}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content Area */}
-              <div className="space-y-4">
-                <div className="flex items-baseline gap-4">
-                  <h3 className="text-3xl font-bold uppercase tracking-tighter text-white">
-                    {brand.name}
-                  </h3>
-                  <div className="h-[1px] flex-1 bg-white/10"></div>
-                </div>
-                <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-blue-400 opacity-90 italic">
-                  {brand.sub}
-                </p>
-                <p className="text-xs text-white/60 font-light leading-relaxed max-w-[90%]">
-                  {brand.desc}
-                </p>
-              </div>
-            </div>
-          ))}
+       {/* Scroll Area */}
+<div className="relative">
+  <div 
+    ref={scrollRef}
+    onScroll={handleScroll}
+    className="flex gap-6 md:gap-8 px-6 md:px-16 overflow-x-auto cursor-grab active:cursor-grabbing select-none
+               scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/20
+               pb-4
+               relative z-10"
+  >
+    {brands.map((brand, i) => (
+      <div 
+        key={i}
+        className="flex-shrink-0 w-[240px] md:w-[400px]"
+      >
+        {/* Image Frame */}
+        <div className="relative rounded-xl aspect-[4/5] overflow-hidden border border-white/10 mb-8 bg-white/5 shadow-2xl">
+          <img 
+            src={brand.img} 
+            alt={brand.name} 
+            draggable={false}
+            className="w-full h-full object-cover grayscale-[0.2] brightness-90"
+          />
           
-          <div className="flex-shrink-0 w-12 md:w-32 h-1" />
+          <div className="absolute top-0 left-0 bg-white text-[#0F1A41] px-4 py-2 text-[10px] font-mono font-bold">
+            {brand.id}
+          </div>
+
+          <div className="absolute bottom-4 left-4">
+            <span className="px-3 py-1 bg-black/40 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-[0.2em] border border-white/20 shadow-sm">
+              {brand.tag}
+            </span>
+          </div>
         </div>
+
+        {/* Content */}
+        <div className="space-y-4">
+          <div className="flex items-baseline gap-4">
+            <h3 className="text-3xl font-bold uppercase tracking-tighter text-white">
+              {brand.name}
+            </h3>
+            <div className="h-[1px] flex-1 bg-white/10"></div>
+          </div>
+
+          <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#FAA269] opacity-90 italic">
+            {brand.sub}
+          </p>
+
+          <p className="text-xs text-white/60 font-light leading-relaxed max-w-[90%]">
+            {brand.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+    
+    <div className="flex-shrink-0 w-6 md:w-32 h-1" />
+  </div>
+
+  {/* Mobile Scroll Hint */}
+  <div className="md:hidden flex items-center justify-center mt-2 gap-2 text-white/40 text-[10px] uppercase tracking-[0.25em]">
+
+    <motion.div
+      animate={{ x: [0, 8, 0] }}
+      transition={{ repeat: Infinity, duration: 1.5 }}
+      className="text-lg"
+    >
+      →
+    </motion.div>
+  </div>
+</div>
       </div>
     </section>
   );

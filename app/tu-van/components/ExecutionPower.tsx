@@ -81,7 +81,6 @@ export default function ExecutionPower() {
           
           {/* PHẦN CHỮ BÊN TRÁI */}
           <div className="md:col-span-4 space-y-6">
-            <span className="text-[10px] tracking-[0.5em] uppercase text-blue-400 font-bold">The Power of Numbers</span>
             <h2 className="text-5xl font-bold uppercase tracking-tighter leading-none text-white">
               Năng lực <br /> <span className="font-light italic opacity-40 text-blue-200">Thực thi.</span>
             </h2>
@@ -113,7 +112,7 @@ export default function ExecutionPower() {
                 </div>
 
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2 text-blue-400 group-hover:text-white transition-colors">
+                  <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2 text-[#FAA269] group-hover:text-[#fc8739] transition-colors">
                     {stat.label}
                   </h3>
                   <p className="text-xs text-white/40 group-hover:text-white/70 font-light italic">

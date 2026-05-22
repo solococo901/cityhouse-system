@@ -44,12 +44,10 @@ export default function CooperationModels() {
       <div className="container mx-auto relative z-10">
         {/* Header Section */}
         <div className="mb-10">
-          <span className="text-[10px] tracking-[0.5em] uppercase text-blue-400 font-bold mb-4 block">
-            Mô hình hợp tác
-          </span>
+         
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter leading-[0.9]">
             PHƯƠNG THỨC <br /> 
-            <span className="font-light italic text-white/40">TRIỂN KHAI.</span>
+            <span className="font-light italic  text-[#FAA269]">TRIỂN KHAI.</span>
           </h2>
         </div>
 
@@ -78,7 +76,7 @@ export default function CooperationModels() {
                   <div className="h-[1px] w-10 bg-blue-500/50 group-hover:w-16 transition-all duration-500"></div>
                 </div>
 
-                <h3 className="text-2xl font-bold uppercase tracking-tight group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold text-[#FAA269] uppercase tracking-tight group-hover:text-[#f88639] transition-colors">
                   {item.title}
                 </h3>
                 

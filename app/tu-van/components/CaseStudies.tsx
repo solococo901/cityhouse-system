@@ -69,7 +69,6 @@ export default function CaseStudies() {
       <div className="container mx-auto mb-12 md:mb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 items-end gap-8">
           <div className="md:col-span-8">
-            <span className="text-[10px] tracking-[0.5em] uppercase text-blue-600 font-bold mb-4 block">Dự án đã thực hiện</span>
             <h2 className="text-3xl md:text-6xl font-bold uppercase tracking-tighter leading-none text-[#0F1A41]">
               Sự chuyển hóa <br /> <span className="font-light italic opacity-30">Giá trị.</span>
             </h2>
@@ -137,7 +136,7 @@ export default function CaseStudies() {
             
             <div className="absolute bottom-6 left-6 flex gap-2 pointer-events-none z-10">
                <span className="px-3 py-1 bg-white/90 text-[8px] md:text-[9px] uppercase tracking-widest backdrop-blur-sm border border-slate-200 text-slate-600 shadow-sm">Hiện trạng</span>
-               <span className="px-3 py-1 bg-blue-600 text-white text-[8px] md:text-[9px] uppercase tracking-widest shadow-lg">Sau cải tạo</span>
+               <span className="px-3 py-1 bg-[#FAA269] text-white text-[8px] md:text-[9px] uppercase tracking-widest shadow-lg">Sau cải tạo</span>
             </div>
           </div>
 

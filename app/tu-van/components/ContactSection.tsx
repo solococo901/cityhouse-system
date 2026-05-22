@@ -24,13 +24,13 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-[10px] tracking-[0.5em] uppercase text-blue-600 font-bold mb-4 block">
+              <span className="text-[10px] tracking-[0.5em] uppercase text-[#FAA269] font-bold mb-4 block">
                 THAM GIA HỆ THỐNG
               </span>
               <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-tighter leading-[1.1] mb-6">
                 Khởi đầu hành trình <br /> 
-                <span className="font-light italic text-[#0F1A41]/30">Quản lý gia sản</span><br/>
-                <span className="font-light italic text-[#0F1A41]/30">Vững bền gia tộc</span>
+                <span className="font-light italic text-[#FAA269]">Quản lý gia sản</span><br/>
+                <span className="font-light italic text-[#FAA269]">Vững bền gia tộc</span>
               </h2>
               <div className="h-[2px] w-24 bg-blue-600 mb-8"></div>
               <p className="text-sm md:text-base text-[#0F1A41]/60 font-medium leading-relaxed max-w-md">
@@ -63,7 +63,7 @@ export default function ContactSection() {
               {/* Trang trí góc Form - Accent Blue */}
               <div className="absolute rounded-tr-xl top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-blue-600/20"></div>
               
-              <h3 className="text-2xl font-bold uppercase tracking-tight mb-8 text-[#0F1A41]">
+              <h3 className="text-2xl font-bold uppercase tracking-tight mb-8 text-[#f88639]">
                 Tham quan & Hợp tác
               </h3>
 
@@ -106,9 +106,9 @@ export default function ContactSection() {
                 </div>
 
                 <motion.button 
-                  whileHover={{ scale: 1.01, backgroundColor: "#0F1A41" }}
+                  whileHover={{ scale: 1.01, backgroundColor: "#f88639" }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-blue-600 text-white font-bold uppercase tracking-[0.2em] py-5 text-xs transition-all flex items-center justify-center gap-3 group shadow-lg shadow-blue-600/20"
+                  className="w-full bg-[#FAA269] text-white font-bold uppercase tracking-[0.2em] py-5 text-xs transition-all flex items-center justify-center gap-3 group shadow-lg shadow-blue-600/20"
                 >
                   Gửi yêu cầu tư vấn
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-2 transition-transform">

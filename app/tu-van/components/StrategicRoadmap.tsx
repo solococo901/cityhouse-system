@@ -44,9 +44,6 @@ export default function StrategicRoadmap() {
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className="mb-10">
-          <span className="text-[10px] tracking-[0.5em] uppercase text-blue-600 font-bold mb-4 block">
-            KẾ HOẠCH THỰC HIỆN 
-          </span>
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter leading-none">
             Qui trình <br /> <span className="font-light italic opacity-30">Kiến tạo giá trị.</span>
           </h2>
@@ -65,7 +62,7 @@ export default function StrategicRoadmap() {
             >
               {/* Step ID */}
               <div className="flex justify-between items-start mb-12">
-                <span className="font-mono text-sm text-blue-600 group-hover:text-blue-400 transition-colors">
+                <span className="font-mono text-sm text-[#FAA269] group-hover:text-[#ff761a] transition-colors">
                   [{step.id}]
                 </span>
                 <div className="h-px w-12 bg-slate-200 group-hover:bg-white/20 transition-all group-hover:w-16"></div>
