@@ -79,7 +79,7 @@ export default function ServiceSection() {
                   {/* Khu vực Số và Icon đầu thẻ */}
                   <div className="mb-8 flex items-center justify-between">
                     {/* Số thứ tự lớn, tinh gọn, vuông góc */}
-                    <div className="text-4xl font-bold tracking-tighter text-[#0F1A41]/20 group-hover:text-amber-400/30 transition-colors duration-500">
+                    <div className="text-4xl font-bold tracking-tighter text-[#0F1A41] group-hover:text-amber-400/30 transition-colors duration-500">
                       {step.number}
                     </div>
 
@@ -90,7 +90,7 @@ export default function ServiceSection() {
                   </div>
 
                   {/* Tiêu đề bước quy trình */}
-                  <h3 className="mb-5 text-xl font-bold uppercase tracking-wide text-[#0F1A41] group-hover:text-white transition-colors duration-500">
+                  <h3 className="mb-5 text-xl font-bold uppercase tracking-wide text-amber-400 group-hover:text-white transition-colors duration-500">
                     {step.title}
                   </h3>
 
@@ -116,7 +116,7 @@ export default function ServiceSection() {
         <div className="mt-14 text-center">
           <a
             href="#contact"
-            className="inline-flex rounded-xl border border-[#0F1A41]/20 bg-[#0F1A41] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white rounded-none transition-all duration-300 hover:bg-amber-400 hover:text-[#0F1A41] hover:border-amber-400 shadow-sm"
+            className="inline-flex rounded-xl border border-[#0F1A41]/20 bg-amber-400 px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#0F1A41] hover:border-amber-400 shadow-sm"
           >
             Xem Chi Tiết
           </a>

@@ -29,9 +29,6 @@ export default function NewsMagazinePage() {
 
             <main className="min-h-screen bg-white font-sans pb-24 ">
                 <Breadcrumb items={breadcrumbData} />
-
-
-
                 <Hero />
                 <MarketInsights />
                 {/* <CoreServices /> */}

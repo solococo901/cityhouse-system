@@ -160,3 +160,116 @@ body {
   box-shadow: 0 18px 50px rgba(17, 31, 61, 0.08);
   backdrop-filter: blur(18px);
 }
+
+
+/* ==========================================================================
+   TÙY BIẾN CLOUDBEDS BOOKING ENGINE - PHONG CÁCH GÓC CẠNH & SANG TRỌNG
+   ========================================================================== */
+
+/* 1. KHÔNG GIAN TỔNG THỂ & CONTAINER */
+cb-immersive-experience {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Đồng bộ nền sáng sạch sẽ, loại bỏ các viền mờ rườm rà */
+.cb-main-container, 
+.cb-content-wrapper {
+  background-color: #ffffff !important;
+}
+
+/* 2. THANH DIỀU HƯỚNG TRÊN CÙNG (WIDGET BAR) */
+/* Đổi màu thanh công cụ tìm kiếm sang Navy #0F1A41 và xóa bo góc */
+.cb-property-header,
+cb-immersive-experience::part(header) {
+  background-color: #0F1A41 !important;
+  border-radius: 0px !important;
+  padding: 12px 20px !important;
+}
+
+/* Làm vuông vức các ô chọn ngày, promo code, filter */
+.cb-search-bar-input,
+.cb-date-picker-trigger,
+.cb-filter-badge,
+.cb-promo-code-trigger {
+  border-radius: 0px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+}
+
+/* 3. KHỐI HIỂN THỊ PHÒNG (ACCOMMODATION CARDS) */
+/* Ép các card phòng thành khối phẳng góc cạnh, giảm khoảng cách để tối ưu khoảng trắng */
+.cb-accommodation-card, 
+.cb-card,
+.cb-rate-plan-container {
+  border-radius: 0px !important; /* Xóa sạch bo góc */
+  border: 1px solid #e5e7eb !important; /* Viền mảnh cao cấp */
+  box-shadow: none !important; /* Tắt bóng đổ mờ sương */
+  padding: 16px !important; /* Tiết chế vừa vặn */
+  margin-bottom: 8px !important; /* Ép các khối nằm sát nhau tạo sự chặt chẽ */
+}
+
+/* Làm vuông vức hình ảnh đại diện của phòng */
+.cb-accommodation-gallery,
+.cb-gallery-image,
+.cb-image-wrapper img {
+  border-radius: 0px !important;
+}
+
+/* 4. THANH TÓM TẮT ĐẶT PHÒNG (RESERVATION SUMMARY - CỘT PHẢI) */
+.cb-summary-container,
+.cb-reservation-summary-card {
+  border-radius: 0px !important;
+  border: 1px solid #0F1A41 !important; /* Tạo điểm nhấn bằng viền Navy */
+  box-shadow: none !important;
+  padding: 20px 16px !important;
+}
+
+/* 5. NÚT BẤM VÀ ĐIỂM NHẤN THỊ GIÁC (BUTTONS & CTA) */
+/* Biến nút "Add", "Continue" thành khối vuông sắc nét, dùng màu xanh Navy chủ đạo */
+cb-immersive-experience::part(button),
+.cb-primary-btn, 
+.cb-button,
+.cb-search-btn,
+.cb-add-btn {
+  background-color: #0F1A41 !important;
+  color: #ffffff !important;
+  border-radius: 0px !important; /* Góc cạnh tuyệt đối */
+  text-transform: uppercase !important; /* Viết hoa sang trọng */
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Hiệu ứng khi hover vào các nút bấm */
+cb-immersive-experience::part(button):hover,
+.cb-primary-btn:hover, 
+.cb-button:hover,
+.cb-add-btn:hover {
+  background-color: #16265c !important; /* Sáng nhẹ lên một tông */
+}
+
+/* 6. MÀU CHỮ VÀ GIÁ TIỀN */
+.cb-room-title,
+.cb-accommodation-name,
+.cb-rate-title {
+  color: #0F1A41 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Làm nổi bật phần giá tiền */
+.cb-price-text,
+.cb-total-amount,
+.cb-amount {
+  color: #0F1A41 !important;
+  font-weight: 700 !important;
+}
+
+/* Biểu tượng tiện ích hoặc số khách */
+.cb-capacity-icon, 
+.cb-amenity-item {
+  color: #4b5563 !important;
+}
+

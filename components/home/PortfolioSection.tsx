@@ -156,7 +156,7 @@ export default function CityHouseEcosystemSection() {
   };
 
   return (
-    <section className="relative  overflow-hidden bg-[#FDFDFD] py-24 border-b border-slate-100 font-['Inter',_sans-serif]">
+    <section className="relative  overflow-hidden bg-[#FDFDFD] py-10 border-b border-slate-100 font-['Inter',_sans-serif]">
       <div className="max-w-[1280px] mx-auto px-6 relative">
         
         {/* HEADER SECTION: Đưa về font-bold Inter, bỏ hẳn nút bo tròn */}
