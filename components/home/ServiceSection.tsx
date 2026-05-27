@@ -58,7 +58,7 @@ export default function ServiceSection() {
             Chúng tôi xây dựng hệ sinh thái vận hành và khai thác bất động sản toàn diện,
             tối ưu dòng tiền và gia tăng giá trị tài sản bền vững.
           </p>
-          <div className="w-12 h-[2px] bg-[#0F1A41] mx-auto mt-6" />
+          <div className="w-12 h-[2px] bg-[#FAA269] mx-auto mt-6" />
         </div>
 
         {/* LƯỚI KHỐI DỊCH VỤ VUÔNG GÓC (ARCHITECTURAL SLABS) */}

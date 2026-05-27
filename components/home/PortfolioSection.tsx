@@ -169,7 +169,7 @@ export default function CityHouseEcosystemSection() {
 
           <a
             href="/projects"
-            className="inline-flex rounded-xl w-fit items-center justify-center gap-3 border border-[#0F1A41]/20 bg-amber-400 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-amber-300 hover:text-[#082079] hover:border-amber-400 shadow-sm"
+            className="inline-flex rounded-xl w-fit items-center justify-center gap-3 border border-[#0F1A41]/20 bg-[#FAA269] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] text-[#0F1A41] rounded-none transition-all duration-300 hover:bg-[#ff8635] hover:text-[#082079] hover:border-amber-400 shadow-sm"
           >
             Xem tất cả
             <span className="text-sm leading-none">→</span>
@@ -270,11 +270,11 @@ export default function CityHouseEcosystemSection() {
 
                 {/* Phần Footer của Card: Đồng bộ line mỏng góc cạnh */}
                 <div className="mt-6 flex items-end justify-between border-t border-slate-100 group-hover:border-white/10 pt-4">
-                  <span className="text-[9px] uppercase leading-tight tracking-widest text-slate-400 group-hover:text-slate-400">
+                  <span className="text-[9px] uppercase leading-tight tracking-widest text-[#FAA269] group-hover:text-slate-400">
                     CityHouse <br /> Portfolio
                   </span>
 
-                  <button className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F1A41] group-hover:text-amber-400 transition-all duration-300">
+                  <button className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F1A41] group-hover:text-[#FAA269] transition-all duration-300">
                     Xem dự án
                     <ArrowIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>

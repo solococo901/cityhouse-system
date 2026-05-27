@@ -39,7 +39,7 @@ export default function ProductLinesSection() {
           <h2 className="text-2xl font-bold uppercase tracking-tight text-[#0F1A41] md:text-4xl">
             5 Dòng Sản Phẩm Định Hình
           </h2>
-          <div className="w-12 h-[2px] bg-[#0F1A41] mx-auto mt-6" />
+          <div className="w-12 h-[2px] bg-[#FAA269] mx-auto mt-6" />
         </div>
 
         {/* LƯỚI SẢN PHẨM: Vuông góc hoàn toàn, biến đổi thành một khối kiến trúc liền vách */}
