@@ -1,6 +1,6 @@
-import AdminBadge from "@/AdminBadge";
-import AdminCard from "@/AdminCard";
-import AdminPageHeader from "@/AdminPageHeader";
+import AdminBadge from "./AdminBadge";
+import AdminCard from "./AdminCard";
+import AdminPageHeader from "./AdminPageHeader";
 
 type AdminEmptyPageProps = {
   title: string;
