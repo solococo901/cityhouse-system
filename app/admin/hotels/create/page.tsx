@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import AdminRichEditor from "@/components/admin/AdminRichEditor";
 import Link from "next/link";
 import {
     ArrowLeft,
@@ -180,7 +180,7 @@ export default function AdminCreateHotelPage() {
     const [descriptionLang, setDescriptionLang] = useState<Language>("vi");
     const [roomLang, setRoomLang] = useState<Language>("vi");
     const [seoLang, setSeoLang] = useState<Language>("vi");
-
+    const [contentHtml, setContentHtml] = useState("");
     const [rooms, setRooms] = useState<Room[]>([
         {
             id: 1,
@@ -327,7 +327,7 @@ export default function AdminCreateHotelPage() {
                                     }
                                 />
 
-                                
+
                             </div>
                         </div>
                     </AdminCard>
@@ -341,18 +341,11 @@ export default function AdminCreateHotelPage() {
                             onChange={setDescriptionLang}
                         />
 
-                        <AdminTextarea
-                            label={
-                                descriptionLang === "vi"
-                                    ? "Mô tả chi tiết tiếng Việt"
-                                    : "Detail description English"
-                            }
-                            placeholder={
-                                descriptionLang === "vi"
-                                    ? "Nhập nội dung chi tiết tiếng Việt..."
-                                    : "Enter English detail content..."
-                            }
-                            rows={8}
+                        <AdminRichEditor
+                            label={descriptionLang === "vi" ? "Nội dung (vi):" : "Content (en):"}
+                            value={contentHtml}
+                            onChange={setContentHtml}
+                            minHeight={520}
                         />
                     </AdminCard>
 
@@ -479,7 +472,7 @@ export default function AdminCreateHotelPage() {
 
                                             <AdminInput label="Số khách" placeholder="2 khách" />
 
-                                            
+
 
                                             <AdminInput
                                                 label="Giá tham khảo"
@@ -489,18 +482,11 @@ export default function AdminCreateHotelPage() {
                                             <AdminInput label="Đơn vị giá" placeholder="/ đêm" />
 
                                             <div className="md:col-span-2">
-                                                <AdminTextarea
-                                                    label={
-                                                        roomLang === "vi"
-                                                            ? "Mô tả phòng"
-                                                            : "Room description"
-                                                    }
-                                                    placeholder={
-                                                        roomLang === "vi"
-                                                            ? "Nhập mô tả phòng tiếng Việt..."
-                                                            : "Enter English room description..."
-                                                    }
-                                                    rows={4}
+                                                <AdminRichEditor
+                                                    label={descriptionLang === "vi" ? "Mô tả chi tiết (vi):" : "Content (en):"}
+                                                    value={contentHtml}
+                                                    onChange={setContentHtml}
+                                                    minHeight={220}
                                                 />
                                             </div>
 
@@ -760,15 +746,14 @@ export default function AdminCreateHotelPage() {
                             />
 
                             <div className="md:col-span-2">
-                                <AdminTextarea
-                                    label="SEO Description"
-                                    placeholder={
-                                        seoLang === "vi"
-                                            ? "Nhập mô tả SEO tiếng Việt..."
-                                            : "Enter English SEO description..."
-                                    }
-                                    rows={4}
+
+                                <AdminRichEditor
+                                    label={seoLang === "vi" ? "Nhập mô tả SEO tiếng Việt..." : "Enter English SEO description..."}
+                                    value={contentHtml}
+                                    onChange={setContentHtml}
+                                    minHeight={120}
                                 />
+                              
                             </div>
                         </div>
                     </AdminCard>
@@ -824,7 +809,7 @@ export default function AdminCreateHotelPage() {
                         </div>
                     </AdminCard>
 
-                  
+
 
                     <AdminCard
                         title="Địa điểm xung quanh"

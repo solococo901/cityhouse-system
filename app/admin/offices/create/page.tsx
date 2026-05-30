@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type ElementType } from "react";
-
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -26,6 +25,7 @@ import AdminButton from "@/components/admin/AdminButton";
 import AdminCard from "@/components/admin/AdminCard";
 import AdminInput from "@/components/admin/AdminInput";
 import AdminPageHeader from "@/components/admin/AdminPageHeader";
+import AdminRichEditor from "@/components/admin/AdminRichEditor";
 import AdminSelect from "@/components/admin/AdminSelect";
 import AdminTextarea from "@/components/admin/AdminTextarea";
 
@@ -179,6 +179,11 @@ export default function AdminCreateOfficePage() {
   const [spaceLang, setSpaceLang] = useState<Language>("vi");
   const [seoLang, setSeoLang] = useState<Language>("vi");
 
+  const [descriptionHtml, setDescriptionHtml] = useState<Record<Language, string>>({
+    vi: "",
+    en: "",
+  });
+
   const [spaces, setSpaces] = useState<OfficeSpace[]>([
     {
       id: 1,
@@ -193,13 +198,13 @@ export default function AdminCreateOfficePage() {
 
   const filteredOfficeAmenities = officeAmenitySearchValue.trim()
     ? officeAmenityOptions.filter((amenity) => {
-        const searchValue = officeAmenitySearchValue.toLowerCase();
+      const searchValue = officeAmenitySearchValue.toLowerCase();
 
-        return (
-          amenity.nameVi.toLowerCase().includes(searchValue) ||
-          amenity.nameEn.toLowerCase().includes(searchValue)
-        );
-      })
+      return (
+        amenity.nameVi.toLowerCase().includes(searchValue) ||
+        amenity.nameEn.toLowerCase().includes(searchValue)
+      );
+    })
     : [];
 
   const handleAddSpace = () => {
@@ -246,6 +251,13 @@ export default function AdminCreateOfficePage() {
     setSelectedOfficeAmenities((prev) => ({
       ...prev,
       [spaceId]: [],
+    }));
+  };
+
+  const handleChangeDescriptionHtml = (value: string) => {
+    setDescriptionHtml((prev) => ({
+      ...prev,
+      [descriptionLang]: value,
     }));
   };
 
@@ -311,7 +323,9 @@ export default function AdminCreateOfficePage() {
             <div className="space-y-5">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <AdminInput
-                  label={overviewLang === "vi" ? "Tên văn phòng" : "Office name"}
+                  label={
+                    overviewLang === "vi" ? "Tên văn phòng" : "Office name"
+                  }
                   placeholder={
                     overviewLang === "vi"
                       ? "Ví dụ: CityHouse Office Quận 1"
@@ -327,33 +341,28 @@ export default function AdminCreateOfficePage() {
                       : "Enter English address"
                   }
                 />
-
-            
               </div>
             </div>
           </AdminCard>
 
           <AdminCard
             title="Mô tả chi tiết"
-            description="Nội dung dài cho trang chi tiết Văn phòng."
+            description="Nội dung dài cho trang chi tiết Văn phòng. Có thể nhập như Word hoặc chèn HTML trực tiếp."
           >
             <LanguageTabs
               activeLang={descriptionLang}
               onChange={setDescriptionLang}
             />
 
-            <AdminTextarea
+            <AdminRichEditor
               label={
                 descriptionLang === "vi"
                   ? "Mô tả chi tiết tiếng Việt"
                   : "Detail description English"
               }
-              placeholder={
-                descriptionLang === "vi"
-                  ? "Nhập nội dung chi tiết tiếng Việt..."
-                  : "Enter English detail content..."
-              }
-              rows={8}
+              value={descriptionHtml[descriptionLang]}
+              onChange={handleChangeDescriptionHtml}
+              minHeight={520}
             />
           </AdminCard>
 
@@ -486,8 +495,6 @@ export default function AdminCreateOfficePage() {
 
                       <AdminInput label="Sức chứa" placeholder="6 người" />
 
-                     
-
                       <AdminInput
                         label="Giá tham khảo"
                         placeholder="12.000.000"
@@ -496,18 +503,16 @@ export default function AdminCreateOfficePage() {
                       <AdminInput label="Đơn vị giá" placeholder="/ tháng" />
 
                       <div className="md:col-span-2">
-                        <AdminTextarea
+
+                        <AdminRichEditor
                           label={
-                            spaceLang === "vi"
+                            descriptionLang === "vi"
                               ? "Mô tả không gian"
                               : "Workspace description"
                           }
-                          placeholder={
-                            spaceLang === "vi"
-                              ? "Nhập mô tả không gian tiếng Việt..."
-                              : "Enter English workspace description..."
-                          }
-                          rows={4}
+                          value={descriptionHtml[descriptionLang]}
+                          onChange={handleChangeDescriptionHtml}
+                          minHeight={220}
                         />
                       </div>
 
@@ -573,7 +578,7 @@ export default function AdminCreateOfficePage() {
                               <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
                                 {filteredOfficeAmenities.map((amenity) => {
                                   const Icon = getOfficeAmenityIcon(
-                                    amenity.iconKey
+                                    amenity.iconKey,
                                   );
                                   const isSelected =
                                     selectedAmenityIds.includes(amenity.id);
@@ -589,7 +594,7 @@ export default function AdminCreateOfficePage() {
                                       onClick={() =>
                                         handleToggleOfficeAmenity(
                                           space.id,
-                                          amenity.id
+                                          amenity.id,
                                         )
                                       }
                                       className={[
@@ -666,13 +671,13 @@ export default function AdminCreateOfficePage() {
                               <div className="flex flex-wrap gap-2">
                                 {selectedAmenityIds.map((amenityId) => {
                                   const amenity = officeAmenityOptions.find(
-                                    (item) => item.id === amenityId
+                                    (item) => item.id === amenityId,
                                   );
 
                                   if (!amenity) return null;
 
                                   const Icon = getOfficeAmenityIcon(
-                                    amenity.iconKey
+                                    amenity.iconKey,
                                   );
 
                                   const label =
@@ -687,7 +692,7 @@ export default function AdminCreateOfficePage() {
                                       onClick={() =>
                                         handleToggleOfficeAmenity(
                                           space.id,
-                                          amenity.id
+                                          amenity.id,
                                         )
                                       }
                                       className="inline-flex items-center gap-2 rounded-full border border-[#0F1A41]/10 bg-white px-3 py-2 text-xs font-bold text-[#0F1A41] shadow-sm transition hover:border-red-100 hover:bg-red-50 hover:text-red-500"
