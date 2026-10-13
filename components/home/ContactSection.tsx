@@ -240,9 +240,6 @@ export default function ContactSection() {
     </section>
 
 
-<script src="https://widget.stepx.vn/chatbot-widget.iife.js"></script>
-<script>
-  window.initChatbotWidget({"channelId":"cmv501kj1001n1hjhmr46zdh8","agentId":"cmv501kak001g1hjhxjll411q","mode":"live"});
-</script>
+
   );
 }
